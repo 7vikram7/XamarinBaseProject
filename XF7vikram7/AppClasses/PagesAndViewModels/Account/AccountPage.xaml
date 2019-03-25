@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns             ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x            ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class            ="XF7vikram7.AppClasses.PagesAndViewModels.Account.AccountPage"
+    xmlns:basepage     ="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n         ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered     ="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7"
+    xmlns:navigationbar="clr-namespace:XF7vikram7.AppClasses.CustomViews.NavigationBar;assembly=XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill"
+            BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+            <navigationbar:NavigationBarView
+                VerticalOptions                ="FillAndExpand"
+                HorizontalOptions              ="FillAndExpand"
+                HeightRequest                  ="64"
+                TitleText                      ="{i18n:Translate Account_ACCOUNT}"
+                LeftImage                      ="left_arrow_black"
+                RightText                      ="{i18n:Translate Account_Logout}"
+                LeftButtonCommand              ="{Binding LeftButtonTapped}"
+                RightButtonCommand             ="{Binding RightButtonTapped}"
+                InnerRightButtonCommand        ="{Binding InnerRightButtonTapped}"
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=64}">
+            </navigationbar:NavigationBarView>
+            <ScrollView
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=64}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-64}">
+                <StackLayout
+                    Orientation      ="Vertical"
+                    Spacing          ="0"
+                    VerticalOptions  ="Fill"
+                    HorizontalOptions="Fill">
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,0,25,0"
+                        HeightRequest  ="37"
+                        BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                        <Label
+                            Text                   ="{i18n:Translate Account_ContactInformation}"
+                            FontSize               ="12"
+                            HorizontalOptions      ="StartAndExpand"
+                            VerticalOptions        ="CenterAndExpand"
+                            HeightRequest          ="17"
+                            TextColor              ="{StaticResource Black_55_55_54}"
+                            BackgroundColor        ="Transparent"
+                            HorizontalTextAlignment="Start" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,15,25,9"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{i18n:Translate Account_NAME}"
+                            FontSize         ="9"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="End"
+                            HeightRequest    ="11"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,0,25,10"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{Binding Name}"
+                            FontSize         ="14"
+                            TextColor        ="{StaticResource Black_55_55_54}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="Start"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        HeightRequest  ="1"
+                        BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,15,25,9"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{i18n:Translate Account_EMAIL}"
+                            FontSize         ="9"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="End"
+                            HeightRequest    ="11"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,0,25,10"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{Binding Email}"
+                            FontSize         ="14"
+                            TextColor        ="{StaticResource Black_55_55_54}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="Start"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        HeightRequest  ="1"
+                        BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,15,25,9"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{i18n:Translate Account_PHONENUMBER}"
+                            FontSize         ="9"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="End"
+                            HeightRequest    ="11"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="25,0,25,10"
+                        BackgroundColor="{StaticResource White_255_255_255}">
+                        <Label
+                            Text             ="{Binding PhoneNumber}"
+                            FontSize         ="14"
+                            TextColor        ="{StaticResource Black_55_55_54}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions  ="Start"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent"
+                            FontAttributes   ="Bold" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        HeightRequest  ="1"
+                        BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Horizontal"
+                        Padding        ="25,0,25,0"
+                        HeightRequest  ="61"
+                        BackgroundColor="{StaticResource Gray_222_222_222}">
+                        <Label
+                            Text                   ="{i18n:Translate Account_ChangePassword}"
+                            FontSize               ="15"
+                            HorizontalOptions      ="StartAndExpand"
+                            VerticalOptions        ="CenterAndExpand"
+                            HeightRequest          ="18"
+                            TextColor              ="{StaticResource Black_55_55_54}"
+                            FontAttributes         ="Bold"
+                            BackgroundColor        ="Transparent"
+                            HorizontalTextAlignment="Start" />
+                        <Image
+                            x:Name           ="changePasswordStatusImage"
+                            Source           ="{Binding ChangePasswordViewStatusImageSource}"
+                            Aspect           ="AspectFit"
+                            HorizontalOptions="End"
+                            VerticalOptions  ="Center">
+                        </Image>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding HeaderTapped}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        Spacing        ="0"
+                        BackgroundColor="{StaticResource White_255_255_255}"
+                        IsVisible      ="{Binding IsChangePasswordViewVisible}">
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,15,25,9"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <Label
+                                Text             ="{i18n:Translate Account_OLDPASSWORD}"
+                                FontSize         ="9"
+                                TextColor        ="{StaticResource Black_89_88_91}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="End"
+                                HeightRequest    ="11"
+                                BackgroundColor  ="Transparent"
+                                FontAttributes   ="Bold" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,0,25,10"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <rendered:BaseEntry
+                                Text             ="{Binding OldPassword}"
+                                Placeholder      ="{i18n:Translate Account_OLDPASSWORD}"
+                                IsPassword       ="true"
+                                FontSize         ="12"
+                                TextColor        ="{StaticResource Black_55_55_54}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="Start"
+                                HeightRequest    ="25"
+                                BackgroundColor  ="Transparent" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="0,0,0,0"
+                            HeightRequest  ="1"
+                            BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,15,25,9"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <Label
+                                Text             ="{i18n:Translate Account_NEWPASSWORD}"
+                                FontSize         ="9"
+                                TextColor        ="{StaticResource Black_89_88_91}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="End"
+                                HeightRequest    ="11"
+                                BackgroundColor  ="Transparent"
+                                FontAttributes   ="Bold" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,0,25,10"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <rendered:BaseEntry
+                                Text             ="{Binding NewPassword}"
+                                Placeholder      ="{i18n:Translate Account_NEWPASSWORD}"
+                                IsPassword       ="true"
+                                FontSize         ="12"
+                                TextColor        ="{StaticResource Black_55_55_54}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="Start"
+                                HeightRequest    ="25"
+                                BackgroundColor  ="Transparent" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="0,0,0,0"
+                            HeightRequest  ="1"
+                            BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,15,25,9"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <Label
+                                Text             ="{i18n:Translate Account_CONFIRMPASSWORD}"
+                                FontSize         ="9"
+                                TextColor        ="{StaticResource Black_89_88_91}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="End"
+                                HeightRequest    ="11"
+                                BackgroundColor  ="Transparent"
+                                FontAttributes   ="Bold" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="25,0,25,10"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <rendered:BaseEntry
+                                Text             ="{Binding ConfirmPassword}"
+                                Placeholder      ="{i18n:Translate Account_CONFIRMPASSWORD}"
+                                IsPassword       ="true"
+                                FontSize         ="12"
+                                TextColor        ="{StaticResource Black_55_55_54}"
+                                HorizontalOptions="Fill"
+                                VerticalOptions  ="Start"
+                                HeightRequest    ="25"
+                                BackgroundColor  ="Transparent" />
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="0,0,0,0"
+                            HeightRequest  ="1"
+                            BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                        </StackLayout>
+                        <StackLayout
+                            Orientation    ="Vertical"
+                            Padding        ="0,10,20,10"
+                            BackgroundColor="{StaticResource White_255_255_255}">
+                            <rendered:BaseButton
+                                Command          ="{Binding ChangePasswordTapped}"
+                                Text             ="{i18n:Translate Account_Confirm}"
+                                TextColor        ="{StaticResource White_255_255_255}"
+                                FontSize         ="16"
+                                FontAttributes   ="Bold"
+                                BackgroundColor  ="{StaticResource BlueLight_3D99EC}"
+                                WidthRequest     ="98"
+                                HeightRequest    ="40"
+                                VerticalOptions  ="Center"
+                                HorizontalOptions="End"
+                                BorderRadius     ="5" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        VerticalOptions="FillAndExpand"
+                        IsVisible      ="{Binding IsChangePasswordViewVisible, Converter={StaticResource InverseBoolConverter}}">
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

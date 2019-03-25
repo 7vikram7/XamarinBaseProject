@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns                   ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x                  ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class                  ="XF7vikram7.AppClasses.PagesAndViewModels.Home.HomePage"
+    xmlns:basepage           ="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n               ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered           ="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7"
+    xmlns:navigationbar      ="clr-namespace:XF7vikram7.AppClasses.CustomViews.NavigationBar;assembly=XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill"
+            BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+            <StackLayout
+                Orientation                    ="Vertical"
+                Spacing                        ="0"
+                VerticalOptions                ="Fill"
+                HorizontalOptions              ="Fill"
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                <StackLayout
+                    Orientation="Vertical"
+                    Padding    ="0,0,0,0">
+                    <navigationbar:NavigationBarView
+                        VerticalOptions        ="FillAndExpand"
+                        HorizontalOptions      ="FillAndExpand"
+                        HeightRequest          ="64"
+                        TitleText              ="{i18n:Translate App_DisplayName}"
+                        LeftImage              ="menu_hamburger"
+                        RightImage             ="notification_bell_icon"
+                        InnerRightImage        ="home_icon"
+                        LeftButtonCommand      ="{Binding LeftButtonTapped}"
+                        RightButtonCommand     ="{Binding RightButtonTapped}"
+                        InnerRightButtonCommand="{Binding InnerRightButtonTapped}">
+                    </navigationbar:NavigationBarView>
+                </StackLayout>
+                <RelativeLayout
+                    HorizontalOptions="Fill"
+                    VerticalOptions  ="Fill"
+                    HeightRequest    ="178.7"
+                    BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+                    <Image
+                        Source                         =""
+                        Aspect                         ="Fill"
+                        BackgroundColor                ="Blue"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                    </Image>
+                    <BoxView
+                        BackgroundColor                ="Black"
+                        Opacity                        ="0.50"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                    </BoxView>
+                    <StackLayout
+                        Orientation                    ="Horizontal"
+                        Padding                        ="20,0,20,0"
+                        BackgroundColor                ="Transparent"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=20}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=26}">
+                        <Label
+                            Text                   ="{Binding Title}"
+                            FontSize               ="18"
+                            HorizontalOptions      ="StartAndExpand"
+                            VerticalOptions        ="CenterAndExpand"
+                            TextColor              ="{StaticResource White_255_255_255}"
+                            BackgroundColor        ="Transparent"
+                            HorizontalTextAlignment="Start" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation                    ="Horizontal"
+                        Padding                        ="20,0,20,0"
+                        BackgroundColor                ="Transparent"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=52}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=26}">
+                        <Image
+                            Source           =""
+                            BackgroundColor  ="Blue"
+                            Aspect           ="AspectFit"
+                            WidthRequest     ="18.2"
+                            HeightRequest    ="16.8"
+                            HorizontalOptions="Start"
+                            VerticalOptions  ="CenterAndExpand">
+                        </Image>
+                        <Label
+                            Text                   ="{Binding SubTitle}"
+                            FontSize               ="13"
+                            HorizontalOptions      ="StartAndExpand"
+                            VerticalOptions        ="CenterAndExpand"
+                            TextColor              ="{StaticResource White_255_255_255}"
+                            BackgroundColor        ="Transparent"
+                            HorizontalTextAlignment="Start" />
+                    </StackLayout>
+                    <rendered:BaseButton
+                        Command                        ="{Binding CallCommand}"
+                        Image                          =""
+                        BackgroundColor                ="Blue"
+                        FontSize                       ="13"
+                        TextColor                      ="{StaticResource White_255_255_255}"
+                        BorderColor                    ="{StaticResource White_255_255_255}"
+                        BorderWidth                    ="1"
+                        BorderRadius                   ="5"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.04, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-44.7}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=32}" />
+                    <rendered:BaseButton
+                        Command                        ="{Binding ChatCommand}"
+                        Image                          =""
+                        FontSize                       ="13"
+                        TextColor                      ="{StaticResource White_255_255_255}"
+                        BorderColor                    ="{StaticResource White_255_255_255}"
+                        BorderWidth                    ="1"
+                        BorderRadius                   ="5"
+                        BackgroundColor                ="Blue"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.28, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-44.7}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=32}" />
+                    <rendered:BaseButton
+                        Command                        ="{Binding EmailCommand}"
+                        Image                          =""
+                        FontSize                       ="13"
+                        TextColor                      ="{StaticResource White_255_255_255}"
+                        BorderColor                    ="{StaticResource White_255_255_255}"
+                        BorderWidth                    ="1"
+                        BorderRadius                   ="5"
+                        BackgroundColor                ="Transparent"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.52, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-44.7}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=32}" />
+                    <rendered:BaseButton
+                        Command                        ="{Binding WebsiteCommand}"
+                        Image                          =""
+                        FontSize                       ="13"
+                        TextColor                      ="{StaticResource White_255_255_255}"
+                        BorderColor                    ="{StaticResource White_255_255_255}"
+                        BorderWidth                    ="1"
+                        BorderRadius                   ="5"
+                        BackgroundColor                ="Transparent"
+                        RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.76, Constant=0}"
+                        RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-44.7}"
+                        RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2, Constant=0}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=32}" />
+                </RelativeLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

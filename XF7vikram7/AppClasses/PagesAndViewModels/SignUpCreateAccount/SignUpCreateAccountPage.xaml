@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns        ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x       ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class       ="XF7vikram7.AppClasses.PagesAndViewModels.SignUpCreateAccount.SignUpCreateAccountPage"
+    xmlns:basepage="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n    ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill"
+            BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+            <ScrollView
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                <StackLayout
+                    Orientation      ="Vertical"
+                    Spacing          ="0"
+                    VerticalOptions  ="Fill"
+                    HorizontalOptions="Fill">
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="0,34.5,0,0">
+                        <Label
+                            Text                   ="{i18n:Translate SignUpCreateAccount_CREATEACCOUNTCAPS}"
+                            FontSize               ="20"
+                            HorizontalOptions      ="Fill"
+                            HeightRequest          ="23"
+                            TextColor              ="{StaticResource Black_55_55_54}"
+                            HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="0,10,0,0">
+                        <Label
+                            Text                   ="{i18n:Translate SignUpCreateAccount_WeWillProvideAText}"
+                            FontSize               ="12"
+                            HorizontalOptions      ="Fill"
+                            HeightRequest          ="30"
+                            WidthRequest           ="195"
+                            TextColor              ="{StaticResource Black_55_55_54}"
+                            HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="0,30,0,0">
+                        <Label
+                            Text                   ="{i18n:Translate SignUpCreateAccount_AccountInformation}"
+                            FontSize               ="15"
+                            HorizontalOptions      ="Fill"
+                            HeightRequest          ="18"
+                            TextColor              ="{StaticResource Black_55_55_54}"
+                            FontAttributes         ="Bold"
+                            HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="44,25,0,0">
+                        <Label
+                            Text             ="{i18n:Translate SignUpCreateAccount_EmailAddress}"
+                            FontSize         ="10"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,5,25,0">
+                        <rendered:BaseEntry
+                            Text             ="{Binding EmailAddress}"
+                            Placeholder      ="{i18n:Translate SignUpCreateAccount_EmailAddress}"
+                            Keyboard         ="{StaticResource NoCapitalizationKeyboard}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource Gray_222_222_222}"
+                            FontSize         ="13"
+                            TextColor        ="{StaticResource Black_55_55_54}" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="44,15,0,0">
+                        <Label
+                            Text             ="{i18n:Translate SignUpCreateAccount_Password}"
+                            FontSize         ="10"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,5,25,0">
+                        <rendered:BaseEntry
+                            Text             ="{Binding Password}"
+                            Placeholder      ="{i18n:Translate SignUpCreateAccount_Password}"
+                            Keyboard         ="{StaticResource NoCapitalizationKeyboard}"
+                            HorizontalOptions="Fill"
+                            IsPassword       ="true"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource Gray_222_222_222}"
+                            FontSize         ="13"
+                            TextColor        ="{StaticResource Black_55_55_54}" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="44,15,0,0">
+                        <Label
+                            Text             ="{i18n:Translate SignUpCreateAccount_ConfirmPassword}"
+                            FontSize         ="10"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,5,25,0">
+                        <rendered:BaseEntry
+                            Text             ="{Binding ConfirmPassword}"
+                            Placeholder      ="{i18n:Translate SignUpCreateAccount_ConfirmPassword}"
+                            Keyboard         ="{StaticResource NoCapitalizationKeyboard}"
+                            HorizontalOptions="Fill"
+                            IsPassword       ="true"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource Gray_222_222_222}"
+                            FontSize         ="13"
+                            TextColor        ="{StaticResource Black_55_55_54}" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation    ="Vertical"
+                        Padding        ="0,0,0,0"
+                        VerticalOptions="FillAndExpand">
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,25,25,95">
+                        <rendered:BaseButton
+                            Command          ="{Binding CreateAccountCommand}"
+                            Text             ="{i18n:Translate SignUpCreateAccount_CreateAccount}"
+                            FontSize         ="18"
+                            TextColor        ="{StaticResource White_255_255_255}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource BlueLight_3D99EC}"
+                            FontAttributes   ="Bold"
+                            BorderRadius     ="20" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <Button
+                Image                     ="left_arrow_black"
+                Command                   ="{Binding BackCommand}"
+                HorizontalOptions         ="Center"
+                VerticalOptions           ="Center"
+                WidthRequest              ="40"
+                HeightRequest             ="40"
+                BackgroundColor           ="Transparent"
+                BorderColor               ="{StaticResource GrayLight_242_242_242}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=20}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=32}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

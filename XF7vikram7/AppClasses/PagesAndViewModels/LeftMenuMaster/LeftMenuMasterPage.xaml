@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns        ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x       ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class       ="XF7vikram7.AppClasses.PagesAndViewModels.LeftMenuMaster.LeftMenuMasterPage"
+    xmlns:basepage="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n    ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7"
+    Title         ="XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill">
+            <StackLayout
+                Orientation                    ="Vertical"
+                Spacing                        ="0"
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                <StackLayout
+                    Orientation    ="Horizontal"
+                    Padding        ="25,30,0,0"
+                    BackgroundColor="{StaticResource BlueLight_3D99EC}">
+                    <Image
+                        Source           ="account_placeholder"
+                        VerticalOptions  ="Center"
+                        HorizontalOptions="Center"
+                        WidthRequest     ="38"
+                        HeightRequest    ="38" />
+                    <Label
+                        x:Name                 ="accountLabel"
+                        Text                   ="{Binding Name}"
+                        FontSize               ="14"
+                        HorizontalOptions      ="Fill"
+                        VerticalOptions        ="Center"
+                        HeightRequest          ="17"
+                        TextColor              ="{StaticResource White_255_255_255}"
+                        FontAttributes         ="Bold"
+                        BackgroundColor        ="{StaticResource BlueLight_3D99EC}"
+                        HorizontalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command         ="{Binding ShowAccountCommand}"
+                            CommandParameter="{x:Reference accountLabel}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Orientation    ="Horizontal"
+                    Padding        ="25,15,25,15"
+                    BackgroundColor="{StaticResource BlueLight_3D99EC}">
+                    <rendered:BaseButton
+                        Command          ="{Binding HomeCommand}"
+                        Text             ="{i18n:Translate LeftMenuMaster_Home}"
+                        FontSize         ="12"
+                        HorizontalOptions="Start"
+                        WidthRequest     ="62"
+                        HeightRequest    ="32"
+                        TextColor        ="{StaticResource White_255_255_255}"
+                        BorderColor      ="{StaticResource White_255_255_255}"
+                        BorderWidth      ="1"
+                        BorderRadius     ="5"
+                        BackgroundColor  ="{StaticResource BlueLight_3D99EC}" />
+                    <rendered:BaseButton
+                        x:Name           ="notificationButton"
+                        Command          ="{Binding NotificationCommand}"
+                        CommandParameter ="{x:Reference notificationButton}"
+                        Text             ="{i18n:Translate LeftMenuMaster_Notifications}"
+                        FontSize         ="12"
+                        HorizontalOptions="Center"
+                        WidthRequest     ="98"
+                        HeightRequest    ="32"
+                        TextColor        ="{StaticResource White_255_255_255}"
+                        BorderColor      ="{StaticResource White_255_255_255}"
+                        BorderWidth      ="1"
+                        BorderRadius     ="5"
+                        BackgroundColor  ="{StaticResource BlueLight_3D99EC}" />
+                    <rendered:BaseButton
+                        Command          ="{Binding LogoutCommand}"
+                        Text             ="{i18n:Translate LeftMenuMaster_Logout}"
+                        FontSize         ="12"
+                        HorizontalOptions="End"
+                        WidthRequest     ="68"
+                        HeightRequest    ="32"
+                        TextColor        ="{StaticResource White_255_255_255}"
+                        BorderColor      ="{StaticResource White_255_255_255}"
+                        BorderWidth      ="1"
+                        BorderRadius     ="5"
+                        BackgroundColor  ="{StaticResource BlueLight_3D99EC}" />
+                </StackLayout>
+                <StackLayout
+                    Orientation    ="Horizontal"
+                    Padding        ="25,25,25,25"
+                    BackgroundColor="{StaticResource Black_55_55_54}">
+                    <Label
+                        Text                   ="SET TITLE HERE"
+                        FontSize               ="18"
+                        HorizontalOptions      ="StartAndExpand"
+                        VerticalOptions        ="Center"
+                        HeightRequest          ="23"
+                        TextColor              ="{StaticResource White_255_255_255}"
+                        BackgroundColor        ="Transparent"
+                        HorizontalTextAlignment="Center" />
+                    <Button
+                        x:Name           ="addButton"
+                        Command          ="{Binding AddCommand}"
+                        CommandParameter ="{x:Reference addButton}"
+                        FontSize         ="10"
+                        HorizontalOptions="End"
+                        WidthRequest     ="20"
+                        HeightRequest    ="20"
+                        Image            =""
+                        BackgroundColor  ="Blue" />
+                </StackLayout>
+                <ListView
+                    x:Name             ="listView"
+                    SeparatorVisibility="None"
+                    ItemsSource        ="{Binding LeftMenuItemModelsList}"
+                    BackgroundColor    ="{StaticResource Black_55_55_54}"
+                    HasUnevenRows      ="true">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Orientation    ="Vertical"
+                                    Padding        ="0,0,0,0"
+                                    HeightRequest  ="90.5"
+                                    VerticalOptions="FillAndExpand">
+                                    <StackLayout
+                                        Orientation  ="Horizontal"
+                                        Padding      ="25,15,0,15"
+                                        HeightRequest="60">
+                                        <Image
+                                            Source         ="leftmenu_dot"
+                                            IsVisible      ="{Binding IsSelected}"
+                                            WidthRequest   ="10"
+                                            HeightRequest  ="10"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label
+                                            Text             ="{Binding Title}"
+                                            FontSize         ="14"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions  ="CenterAndExpand"
+                                            TextColor        ="{StaticResource White_255_255_255}"
+                                            FontAttributes   ="Bold" />
+                                    </StackLayout>
+                                    <StackLayout
+                                        Orientation      ="Vertical"
+                                        Padding          ="0,0,0,0"
+                                        HeightRequest    ="0.5"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions  ="End">
+                                        <Image
+                                            BackgroundColor  ="{StaticResource GrayLight_242_242_242}"
+                                            HeightRequest    ="0.5"
+                                            HorizontalOptions="FillAndExpand" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

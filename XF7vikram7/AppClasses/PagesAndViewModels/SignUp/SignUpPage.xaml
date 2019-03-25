@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns        ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x       ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class       ="XF7vikram7.AppClasses.PagesAndViewModels.SignUp.SignUpPage"
+    xmlns:basepage="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n    ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill"
+            BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+            <ScrollView
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                <StackLayout
+                    Orientation      ="Vertical"
+                    Spacing          ="0"
+                    VerticalOptions  ="Fill"
+                    HorizontalOptions="Fill">
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="0,84,0,70">
+                        <Image
+                            Source           =""
+                            VerticalOptions  ="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest     ="235.6"
+                            HeightRequest    ="113"
+                            BackgroundColor  ="Blue" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="44,0,0,5.5">
+                        <Label
+                            Text             ="{i18n:Translate SignUp_EmailAddress}"
+                            FontSize         ="10"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,0,25,10.5">
+                        <rendered:BaseEntry
+                            Text             ="{Binding EmailAddress}"
+                            TextChanged      ="HandleEmail_TextChanged"
+                            Placeholder      ="{i18n:Translate SignUp_EmailAddress}"
+                            Keyboard         ="{StaticResource NoCapitalizationKeyboard}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource Gray_222_222_222}"
+                            FontSize         ="13"
+                            TextColor        ="{StaticResource Black_55_55_54}">
+                        </rendered:BaseEntry>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="44,0,0,5.5">
+                        <Label
+                            Text             ="{i18n:Translate SignUp_Password}"
+                            FontSize         ="10"
+                            TextColor        ="{StaticResource Black_89_88_91}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="17"
+                            BackgroundColor  ="Transparent" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,0,25,10.5">
+                        <RelativeLayout
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="40">
+                            <rendered:BaseEntry
+                                x:Name                         ="passwordEntry"
+                                Text                           ="{Binding Password}"
+                                Placeholder                    ="{i18n:Translate SignUp_Password}"
+                                Keyboard                       ="{StaticResource NoCapitalizationKeyboard}"
+                                HorizontalOptions              ="Fill"
+                                HeightRequest                  ="40"
+                                IsPassword                     ="true"
+                                BackgroundColor                ="{StaticResource Gray_222_222_222}"
+                                FontSize                       ="13"
+                                TextColor                      ="{StaticResource Black_55_55_54}"
+                                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}" />
+                            <StackLayout
+                                Orientation                    ="Vertical"
+                                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-47}"
+                                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=40}"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+                                <Image
+                                    Source           ="eye_viewpassword"
+                                    Aspect           ="AspectFit"
+                                    WidthRequest     ="13"
+                                    HeightRequest    ="15"
+                                    VerticalOptions  ="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command         ="{Binding ShowPasswordCommand}"
+                                        CommandParameter="{x:Reference passwordEntry}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </RelativeLayout>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation      ="Horizontal"
+                        Padding          ="35,0,25,40"
+                        HorizontalOptions="Fill">
+                        <StackLayout
+                            Orientation      ="Vertical"
+                            HorizontalOptions="Start"
+                            VerticalOptions  ="Center"
+                            HeightRequest    ="20.8"
+                            WidthRequest     ="20.8"
+                            BackgroundColor  ="{StaticResource BlueLight_3D99EC}">
+                            <Button
+                                x:Name           ="buttonRememberMe"
+                                IsVisible        ="{Binding IsRememberMeChecked}"
+                                Command          ="{Binding RememberMeCommand}"
+                                CommandParameter ="{x:Reference buttonRememberMe}"
+                                Image            ="tick_black"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions  ="FillAndExpand"
+                                HeightRequest    ="13"
+                                WidthRequest     ="10"
+                                BackgroundColor  ="Transparent" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command         ="{Binding RememberMeCommand}"
+                                    CommandParameter="{x:Reference buttonRememberMe}" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                        <Label
+                            Text             ="{i18n:Translate SignUp_Rememberme}"
+                            FontSize         ="12"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions  ="Center"
+                            HeightRequest    ="15"
+                            TextColor        ="{StaticResource Black_55_55_54}" />
+                        <Label
+                            x:Name           ="forgotPasswordLabel"
+                            Text             ="{i18n:Translate SignUp_ForgotPassword}"
+                            FontSize         ="12"
+                            HorizontalOptions="End"
+                            VerticalOptions  ="Center"
+                            HeightRequest    ="15"
+                            TextColor        ="{StaticResource Black_55_55_54}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command         ="{Binding ForgotPasswordCommand}"
+                                    CommandParameter="{x:Reference forgotPasswordLabel}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
+                        Padding    ="25,0,25,25">
+                        <rendered:BaseButton
+                            x:Name           ="signInButton"
+                            Command          ="{Binding SignInCommand}"
+                            CommandParameter ="{x:Reference signInButton}"
+                            Text             ="{i18n:Translate SignUp_SignIn}"
+                            FontSize         ="18"
+                            TextColor        ="{StaticResource White_255_255_255}"
+                            HorizontalOptions="Fill"
+                            HeightRequest    ="40"
+                            BackgroundColor  ="{StaticResource BlueLight_3D99EC}"
+                            FontAttributes   ="Bold"
+                            BorderRadius     ="20" />
+                    </StackLayout>
+                    <StackLayout
+                        Orientation      ="Horizontal"
+                        Padding          ="0,0,0,20"
+                        HorizontalOptions="Center">
+                        <Label
+                            x:Name           ="signUpLabel"
+                            Text             ="{i18n:Translate SignUp_DontHaveAnAccount}"
+                            FontSize         ="10"
+                            HorizontalOptions="Center"
+                            HeightRequest    ="15"
+                            TextColor        ="{StaticResource Black_55_55_54}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command         ="{Binding SignUpCommand}"
+                                    CommandParameter="{x:Reference signUpLabel}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Text             ="{i18n:Translate SignUp_SignUp}"
+                            FontSize         ="10"
+                            HorizontalOptions="Center"
+                            HeightRequest    ="15"
+                            TextColor        ="{StaticResource BlueLight_3D99EC}"
+                            FontAttributes   ="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command         ="{Binding SignUpCommand}"
+                                    CommandParameter="{x:Reference signUpLabel}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basepage:BasePage
+    xmlns             ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x            ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class            ="XF7vikram7.AppClasses.PagesAndViewModels.Notification.NotificationPage"
+    xmlns:basepage     ="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.Base;assembly=XF7vikram7"
+    xmlns:i18n         ="clr-namespace:XF7vikram7;assembly=XF7vikram7"
+    xmlns:rendered     ="clr-namespace:XF7vikram7.AppClasses.Rendered;assembly=XF7vikram7"
+    xmlns:navigationbar="clr-namespace:XF7vikram7.AppClasses.CustomViews.NavigationBar;assembly=XF7vikram7">
+    <ContentPage.Content>
+        <RelativeLayout
+            HorizontalOptions="Fill"
+            BackgroundColor  ="{StaticResource GrayLight_242_242_242}">
+            <navigationbar:NavigationBarView
+                VerticalOptions                ="FillAndExpand"
+                HorizontalOptions              ="FillAndExpand"
+                HeightRequest                  ="64"
+                TitleText                      ="{i18n:Translate Notifications_NOTIFICATIONS}"
+                LeftImage                      ="left_arrow_black"
+                RightImage                     ="filter_icon"
+                InnerRightImage                ="home_icon"
+                LeftButtonCommand              ="{Binding LeftButtonTapped}"
+                RightButtonCommand             ="{Binding RightButtonTapped}"
+                InnerRightButtonCommand        ="{Binding InnerRightButtonTapped}"
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=64}">
+            </navigationbar:NavigationBarView>
+            <ListView
+                x:Name                         ="listView"
+                SeparatorVisibility            ="None"
+                ItemsSource                    ="{Binding NotificationsList}"
+                BackgroundColor                ="{StaticResource White_255_255_255}"
+                HasUnevenRows                  ="true"
+                VerticalOptions                ="FillAndExpand"
+                RelativeLayout.XConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                RelativeLayout.YConstraint     ="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=64}"
+                RelativeLayout.WidthConstraint ="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-64}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation    ="Vertical"
+                                Padding        ="0,0,0,0"
+                                BackgroundColor="{StaticResource White_255_255_255}">
+                                <StackLayout
+                                    Orientation    ="Vertical"
+                                    Padding        ="25,16,0,10"
+                                    BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                                    <Label
+                                        Text             ="{Binding NotificationDateTime}"
+                                        FontSize         ="12"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions  ="Center"
+                                        TextColor        ="{StaticResource Black_55_55_54}"
+                                        HeightRequest    ="15" />
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation      ="Vertical"
+                                    HorizontalOptions="StartAndExpand"
+                                    Padding          ="25,10,25,13"
+                                    BackgroundColor  ="{StaticResource White_255_255_255}">
+                                    <Label
+                                        Text             ="{Binding Title}"
+                                        FontSize         ="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions  ="Center"
+                                        TextColor        ="{StaticResource Black_55_55_54}"
+                                        HeightRequest    ="16" />
+                                    <Label
+                                        Text             ="{Binding Text}"
+                                        FontSize         ="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions  ="End"
+                                        TextColor        ="{StaticResource Black_55_55_54}"
+                                        HeightRequest    ="16" />
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation    ="Vertical"
+                                    Padding        ="0,0,0,0"
+                                    HeightRequest  ="1"
+                                    BackgroundColor="{StaticResource GrayLight_242_242_242}">
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</basepage:BasePage>

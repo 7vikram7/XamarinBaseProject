@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XF7vikram7.AppClasses.PagesAndViewModels.MasterDetailMain.MasterDetailMainPage"
+    xmlns:localMasterPath="clr-namespace:XF7vikram7.AppClasses.PagesAndViewModels.LeftMenuMaster;assembly=XF7vikram7">
+    <MasterDetailPage.Master>
+        <localMasterPath:LeftMenuMasterPage
+            x:Name="masterPage" />
+    </MasterDetailPage.Master>
+</MasterDetailPage>

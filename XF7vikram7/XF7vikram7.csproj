@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9731E6B-82DB-41D2-8F61-1121C37F9619}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XF7vikram7</RootNamespace>
+    <AssemblyName>XF7vikram7</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="AppClasses\CustomViews\Base\BaseView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\CustomViews\NavigationBar\NavigationBarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.es.resx" />
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\Base\BasePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\Account\AccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\ForgotPassword\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\LeftMenuMaster\LeftMenuMasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\MasterDetailMain\MasterDetailMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\Notification\NotificationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\SignUp\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\SignUpCreateAccount\SignUpCreateAccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppClasses\PagesAndViewModels\Home\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppClasses\Common\Converters\InverseBoolConverter.cs" />
+    <Compile Include="AppClasses\Common\Extensions\ObjectExtensions.cs" />
+    <Compile Include="AppClasses\Common\Extensions\ViewExtensions.cs" />
+    <Compile Include="AppClasses\Common\Statics\AppConstants.cs" />
+    <Compile Include="AppClasses\CustomViews\Base\BaseView.xaml.cs" />
+    <Compile Include="AppClasses\CustomViews\Base\BaseViewModel.cs" />
+    <Compile Include="AppClasses\CustomViews\NavigationBar\NavigationBarView.xaml.cs" />
+    <Compile Include="Resources\Localisation\ILocale.cs" />
+    <Compile Include="Resources\Localisation\L10n.cs" />
+    <Compile Include="Resources\Localisation\TranslateExtension.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppClasses\Rendered\BaseButton.cs" />
+    <Compile Include="AppClasses\Rendered\BaseEntry.cs" />
+    <Compile Include="AppClasses\DataModels\ErrorModel.cs" />
+    <Compile Include="AppClasses\DataModels\ErrorModelContract.cs" />
+    <Compile Include="AppClasses\DataModels\SessionData.cs" />
+    <Compile Include="AppClasses\DataModels\SessionDataModel.cs" />
+    <Compile Include="AppClasses\Interfaces\IDialogService.cs" />
+    <Compile Include="AppClasses\Services\DialogService.cs" />
+    <Compile Include="AppClasses\WebServices\BaseRestService.cs" />
+    <Compile Include="AppClasses\WebServices\PasswordRestServices.cs" />
+    <Compile Include="AppClasses\WebServices\SignUpRestService.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Base\BaseItemModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Base\BasePage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Base\BasePageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\SignUp\SignUpPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\SignUp\SignUpPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\ForgotPassword\ForgotPasswordPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\ForgotPassword\ForgotPasswordPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Account\AccountPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Account\AccountPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\LeftMenuMaster\LeftMenuItemModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\LeftMenuMaster\LeftMenuMasterPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\LeftMenuMaster\LeftMenuMasterPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\MasterDetailMain\MasterDetailMainPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\MasterDetailMain\MasterDetailMainPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Notification\NotificationListItemModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Notification\NotificationPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Notification\NotificationPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\SignUpCreateAccount\SignUpCreateAccountPage.xaml.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\SignUpCreateAccount\SignUpCreateAccountPageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Home\HomePageModel.cs" />
+    <Compile Include="AppClasses\PagesAndViewModels\Home\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.280\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.280\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.280\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.2.0.0\lib\netstandard1.1\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppClasses\PagesAndViewModels\Home\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
+</Project>

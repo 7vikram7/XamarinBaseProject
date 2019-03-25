@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    xmlns          ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x         ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class         ="XF7vikram7.App"
+    xmlns:converters="clr-namespace:XF7vikram7.AppClasses.Common.Converters;assembly=XF7vikram7">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--***********************
+            Colors 
+            ***********************-->
+            <Color
+                x:Key="Black_000000">#000000</Color>
+            <Color
+                x:Key="Black_89_88_91">#59585B</Color>
+            <Color
+                x:Key="Black_55_55_54">#373736</Color>
+            <Color
+                x:Key="Gray_222_222_222">#DEDEDE</Color>
+            <Color
+                x:Key="GrayLight_242_242_242">#F2F2F2</Color>
+            <Color
+                x:Key="BlueLight_3D99EC">#3D99EC</Color>
+            <Color
+                x:Key="White_255_255_255">#FFFFFF</Color>
+            <!--***********************
+            Converters 
+            ***********************-->
+            <converters:InverseBoolConverter
+                x:Key="InverseBoolConverter" />
+            <!--***********************
+            Keyboards 
+            ***********************-->
+            <Keyboard
+                x:Key          ="NoCapitalizationKeyboard"
+                x:FactoryMethod="Create">
+                <x:Arguments>
+                    <KeyboardFlags>None</KeyboardFlags>
+                </x:Arguments>
+            </Keyboard>
+            <!--***********************
+            Fonts 
+            ***********************-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

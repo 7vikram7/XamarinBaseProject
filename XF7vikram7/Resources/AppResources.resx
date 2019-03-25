@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader
+		name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader
+		name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader
+		name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader
+		name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<!--***********************
+    Application Common
+    ***********************-->
+	<data
+		name     ="App_DisplayName"
+		xml:space="preserve">
+    <value>XF7vikram7</value>
+  </data>
+	<data
+		name     ="App_Alert"
+		xml:space="preserve">
+    <value>Alert</value>
+  </data>
+	<data
+		name     ="App_PleaseWait"
+		xml:space="preserve">
+    <value>please wait . . .</value>
+  </data>
+	<data
+		name     ="App_NetworkNotAvailable"
+		xml:space="preserve">
+    <value>Network is not available, please try again.</value>
+  </data>
+	<data
+		name     ="App_Ok"
+		xml:space="preserve">
+    <value>Ok</value>
+  </data>
+	<data
+		name     ="App_Yes"
+		xml:space="preserve">
+    <value>Yes</value>
+  </data>
+	<data
+		name     ="App_No"
+		xml:space="preserve">
+    <value>No</value>
+  </data>
+	<data
+		name     ="App_Cancel"
+		xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data
+		name     ="App_Save"
+		xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data
+		name     ="App_Done"
+		xml:space="preserve">
+    <value>Done</value>
+  </data>
+	<data
+		name     ="App_Edit"
+		xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data
+		name     ="App_SelectImageFrom"
+		xml:space="preserve">
+    <value>Select Image from :</value>
+  </data>
+	<data
+		name     ="App_PhotoGallery"
+		xml:space="preserve">
+    <value>Photo Gallery</value>
+  </data>
+	<data
+		name     ="App_Camera"
+		xml:space="preserve">
+    <value>Camera</value>
+  </data>
+	<data
+		name     ="App_CameraNotAvailable"
+		xml:space="preserve">
+    <value>Camera is not available.</value>
+  </data>
+	<data
+		name     ="App_PhotoGalleryNotAvailable"
+		xml:space="preserve">
+    <value>Photo Gallery is not available.</value>
+  </data>
+	<data
+		name     ="App_Error"
+		xml:space="preserve">
+    <value>Error</value>
+  </data>
+	<data
+		name     ="App_InvalidPhoneNumberCantCall"
+		xml:space="preserve">
+    <value>Invalid phone number. Cannot make a call.</value>
+  </data>
+	<data
+		name     ="App_CallFeatureNotAvailable"
+		xml:space="preserve">
+    <value>Call feature not available on the device.</value>
+  </data>
+	<data
+		name     ="App_InvalidEmailAddresCantEmail"
+		xml:space="preserve">
+    <value>Invalid email address. Cannot send an email.</value>
+  </data>
+	<data
+		name     ="App_EmailFeatureNotAvailable"
+		xml:space="preserve">
+    <value>Email feature not available on the device.</value>
+  </data>
+	<data
+		name     ="App_InvalidWebsiteURL"
+		xml:space="preserve">
+    <value>Invalid website link. Cannot open the link.</value>
+  </data>
+	<data
+		name     ="App_OpenURLNotAvailable"
+		xml:space="preserve">
+    <value>Could not open the link on this Device.</value>
+  </data>
+	<!--***********************
+    SIGN UP PAGE
+    ***********************-->
+	<data
+		name     ="SignUp_EmailAddress"
+		xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+	<data
+		name     ="SignUp_Password"
+		xml:space="preserve">
+    <value>Password</value>
+  </data>
+	<data
+		name     ="SignUp_Rememberme"
+		xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+	<data
+		name     ="SignUp_ForgotPassword"
+		xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+	<data
+		name     ="SignUp_SignIn"
+		xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+	<data
+		name     ="SignUp_DontHaveAnAccount"
+		xml:space="preserve">
+    <value>Don’t have an account?</value>
+  </data>
+	<data
+		name     ="SignUp_SignUp"
+		xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+	<data
+		name     ="SignUp_EnterEmailValidation"
+		xml:space="preserve">
+    <value> Please enter the email address.</value>
+  </data>
+	<data
+		name     ="SignUp_EnterPasswordValidation"
+		xml:space="preserve">
+    <value>Please enter the password.</value>
+  </data>
+	<data
+		name     ="SignUp_InvalidCredentials"
+		xml:space="preserve">
+    <value>Invalid credentials. Please try again.</value>
+  </data>
+	<!--***********************
+    FORGOT PASSWORD PAGE
+    ***********************-->
+	<data
+		name     ="ForgotPassword_PleaseEnterEmailText"
+		xml:space="preserve">
+    <value>Please enter your email address to receive the password reset link.</value>
+  </data>
+	<data
+		name     ="ForgotPassword_EmailAddress"
+		xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+	<data
+		name     ="ForgotPassword_ResetPassword"
+		xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+	<data
+		name     ="ForgotPassword_EnterEmailValidation"
+		xml:space="preserve">
+    <value> Please enter the email address.</value>
+  </data>
+	<data
+		name     ="ForgotPassword_EmailSentToResetPassword"
+		xml:space="preserve">
+    <value>An email with instructions to reset your password has been sent.</value>
+  </data>
+	<data
+		name     ="ForgotPassword_EmailNotFound"
+		xml:space="preserve">
+    <value>Email not registered with us. Please verify your email and try again.</value>
+  </data>
+	<!--***********************
+    SIGN UP CREATE ACCOUNT PAGE
+    ***********************-->
+	<data
+		name     ="SignUpCreateAccount_CREATEACCOUNTCAPS"
+		xml:space="preserve">
+    <value>CREATE ACCOUNT</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_WeWillProvideAText"
+		xml:space="preserve">
+    <value>We will provide a text to confirm your phone number.</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_AccountInformation"
+		xml:space="preserve">
+    <value>Account information</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_EmailAddress"
+		xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_Password"
+		xml:space="preserve">
+    <value>Password</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_ConfirmPassword"
+		xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_CreateAccount"
+		xml:space="preserve">
+    <value>Create Account</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_EnterEmailValidation"
+		xml:space="preserve">
+    <value> Please enter the email address.</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_EnterPasswordValidation"
+		xml:space="preserve">
+    <value>Please enter the password.</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_PasswordNotMatchingValidation"
+		xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+	<data
+		name     ="SignUpCreateAccount_EmailAlreadyPresent"
+		xml:space="preserve">
+    <value>The Email has already been registered with us. Please try logging in using the email or enter another email address.</value>
+  </data>
+	<!--***********************
+   LEFT MENU MASTER PAGE
+    ***********************-->
+	<data
+		name     ="LeftMenuMaster_Home"
+		xml:space="preserve">
+    <value>Home</value>
+  </data>
+	<data
+		name     ="LeftMenuMaster_Notifications"
+		xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+	<data
+		name     ="LeftMenuMaster_Logout"
+		xml:space="preserve">
+    <value>Logout</value>
+  </data>
+	<data
+		name     ="LeftMenuMaster_FailedToLogUserOut"
+		xml:space="preserve">
+    <value>Failed to Logout from the Application. Please try again later.</value>
+  </data>
+	<!--***********************
+   ACCOUNT PAGE
+    ***********************-->
+	<data
+		name     ="Account_ACCOUNT"
+		xml:space="preserve">
+    <value>ACCOUNT</value>
+  </data>
+	<data
+		name     ="Account_Logout"
+		xml:space="preserve">
+    <value>Logout</value>
+  </data>
+	<data
+		name     ="Account_ContactInformation"
+		xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+	<data
+		name     ="Account_NAME"
+		xml:space="preserve">
+    <value>NAME</value>
+  </data>
+	<data
+		name     ="Account_EMAIL"
+		xml:space="preserve">
+    <value>EMAIL</value>
+  </data>
+	<data
+		name     ="Account_PHONENUMBER"
+		xml:space="preserve">
+    <value>PHONE NUMBER</value>
+  </data>
+	<data
+		name     ="Account_ChangePassword"
+		xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+	<data
+		name     ="Account_OLDPASSWORD"
+		xml:space="preserve">
+    <value>OLD PASSWORD</value>
+  </data>
+	<data
+		name     ="Account_NEWPASSWORD"
+		xml:space="preserve">
+    <value>NEW PASSWORD</value>
+  </data>
+	<data
+		name     ="Account_CONFIRMPASSWORD"
+		xml:space="preserve">
+    <value>CONFIRM PASSWORD</value>
+  </data>
+	<data
+		name     ="Account_Confirm"
+		xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+	<data
+		name     ="Account_EnterOldPassword"
+		xml:space="preserve">
+    <value>Please enter the old password.</value>
+  </data>
+	<data
+		name     ="Account_EnterNewPassword"
+		xml:space="preserve">
+    <value>Please enter the new password.</value>
+  </data>
+	<data
+		name     ="Account_EnterConfirmPassword"
+		xml:space="preserve">
+    <value>Please re-enter the new password in the confirm password field.</value>
+  </data>
+	<data
+		name     ="Account_NewPasswordDoNotMatch"
+		xml:space="preserve">
+    <value>The new passwords do not match.</value>
+  </data>
+	<data
+		name     ="Account_ChangePasswordSuccessful"
+		xml:space="preserve">
+    <value>Password updated successfully.</value>
+  </data>
+	<data
+		name     ="Account_ChangePasswordFailed"
+		xml:space="preserve">
+    <value>Failed to update password. Please try again later.</value>
+  </data>
+	<!--***********************
+   NOTIFICATIONS PAGE
+    ***********************-->
+	<data
+		name     ="Notifications_NOTIFICATIONS"
+		xml:space="preserve">
+    <value>NOTIFICATIONS</value>
+  </data>
+	<data
+		name     ="Notifications_All"
+		xml:space="preserve">
+    <value>All</value>
+  </data>
+</root>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<baseview:BaseView
+    xmlns        ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x       ="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class       ="XF7vikram7.AppClasses.CustomViews.NavigationBar.NavigationBarView"
+    xmlns:baseview="clr-namespace:XF7vikram7.AppClasses.CustomViews.Base;assembly=XF7vikram7">
+    <ContentView.Content>
+        <StackLayout
+            Orientation      ="Horizontal"
+            Padding          ="14,20,14,0"
+            HeightRequest    ="44"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor  ="{StaticResource BlueLight_3D99EC}">
+            <StackLayout
+                x:Name           ="leftStackLayout"
+                Orientation      ="Vertical"
+                Padding          ="0,0,0,0"
+                WidthRequest     ="44"
+                HeightRequest    ="44"
+                HorizontalOptions="Start"
+                VerticalOptions  ="Center">
+                <Image
+                    x:Name           ="leftImage"
+                    Source           =""
+                    Aspect           ="AspectFit"
+                    VerticalOptions  ="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    IsVisible        ="false">
+                </Image>
+            </StackLayout>
+            <Label
+                x:Name                 ="titleLabel"
+                Text                   =""
+                FontSize               ="14"
+                HorizontalOptions      ="CenterAndExpand"
+                VerticalOptions        ="Center"
+                HeightRequest          ="17"
+                TextColor              ="{StaticResource Black_000000}"
+                FontAttributes         ="Bold"
+                BackgroundColor        ="{StaticResource BlueLight_3D99EC}"
+                HorizontalTextAlignment="Center" />
+            <StackLayout
+                x:Name             ="innerRightStackLayout"
+                Orientation        ="Horizontal"
+                Padding            ="0,0,20,0"
+                MinimumWidthRequest="40"
+                HeightRequest      ="44"
+                HorizontalOptions  ="End"
+                VerticalOptions    ="Center">
+                <Image
+                    x:Name           ="innerRightImage"
+                    Source           =""
+                    Aspect           ="AspectFit"
+                    VerticalOptions  ="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    IsVisible        ="false">
+                </Image>
+                <Label
+                    x:Name                 ="innerRightLabel"
+                    Text                   =""
+                    FontSize               ="13"
+                    HorizontalOptions      ="Center"
+                    VerticalOptions        ="CenterAndExpand"
+                    HeightRequest          ="17"
+                    TextColor              ="{StaticResource Black_000000}"
+                    FontAttributes         ="Bold"
+                    BackgroundColor        ="{StaticResource BlueLight_3D99EC}"
+                    HorizontalTextAlignment="End"
+                    IsVisible              ="false">
+                </Label>
+            </StackLayout>
+            <StackLayout
+                x:Name             ="rightStackLayout"
+                Orientation        ="Horizontal"
+                Padding            ="0,0,0,0"
+                MinimumWidthRequest="40"
+                HeightRequest      ="44"
+                HorizontalOptions  ="End"
+                VerticalOptions    ="Center">
+                <Image
+                    x:Name           ="rightImage"
+                    Source           =""
+                    Aspect           ="AspectFit"
+                    VerticalOptions  ="Center"
+                    HorizontalOptions="Center"
+                    IsVisible        ="false">
+                </Image>
+                <Label
+                    x:Name                 ="rightLabel"
+                    Text                   =""
+                    FontSize               ="13"
+                    HorizontalOptions      ="Center"
+                    VerticalOptions        ="CenterAndExpand"
+                    HeightRequest          ="17"
+                    TextColor              ="{StaticResource Black_000000}"
+                    FontAttributes         ="Bold"
+                    BackgroundColor        ="{StaticResource BlueLight_3D99EC}"
+                    HorizontalTextAlignment="End"
+                    IsVisible              ="false">
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</baseview:BaseView>
